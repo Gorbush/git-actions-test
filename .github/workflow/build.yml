@@ -6,7 +6,7 @@ on:
 #      - '*'
   push:
     branches:
-      - 'master'
+      - 'main'
 
 jobs:
   build:
@@ -18,4 +18,7 @@ jobs:
         with:
           java-version: 1.8
       - name: Maven Package
-        run: mvn -B clean package -DskipTests
+        run: |
+          echo "01 Run the Maven Build"
+          mvn -B clean package -DskipTests
+          echo "02 Execute the app"
