@@ -22,3 +22,4 @@ jobs:
           echo "01 Run the MAIN Maven Build"
           mvn -B clean package -DskipTests
           echo "02 Execute MAIN the app"
+          java -classpath target/classes com.home.marina.gitactionstest.GitActionsTestApplication
